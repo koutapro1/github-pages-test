@@ -21,5 +21,5 @@ export default function Page() {
     });
   }, []);
 
-  return <p>{data ? `Your data: ${data}` : "Loading..."}</p>;
+  return <p>{data ? `Your data: ${JSON.stringify(data)}` : "Loading..."}</p>;
 }
