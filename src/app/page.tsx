@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -13,6 +14,28 @@ export default function Home() {
           height={38}
           priority
         />
+        <nav style={{ margin: "2rem 0" }}>
+          <h2>ページ一覧</h2>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            <li style={{ margin: "0.5rem 0" }}>
+              <Link
+                href="/about"
+                style={{ color: "blue", textDecoration: "underline" }}
+              >
+                About
+              </Link>
+            </li>
+            <li style={{ margin: "0.5rem 0" }}>
+              <Link
+                href="/blog"
+                style={{ color: "blue", textDecoration: "underline" }}
+              >
+                Blog
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
         <ol>
           <li>
             Get started by editing <code>src/app/page.tsx</code>.
